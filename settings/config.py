@@ -15,5 +15,7 @@ class Settings(BaseSettings):
     PROJECT_TITLE: str
     PROJECT_VERSION: str
 
-
+    def get_db_url(self):
+        return f"postgresql://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+    
 settings = Settings()
