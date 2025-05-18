@@ -1,2 +1,2 @@
 run/devserver:
-	uvicorn main:app --reload
+	poetry run uvicorn main:app --reload
